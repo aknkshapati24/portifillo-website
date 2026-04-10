@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+body{
+line-height:1.6;
+}
+header{
+background:#222;
+color:white;
+position:sticky;
+top:0;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+}
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+nav ul{
+display:flex;
+list-style:none;
+}
+nav ul li{
+margin-left:20px;
+}
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+.section{
+padding:80px 10%;
+text-align:center;
+}
+#home{
+background:#f4f4f4;
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.project-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+.card{
+background:#f4f4f4;
+padding:20px;
+width:250px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:20px;
+}
+input, textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+button{
+padding:10px;
+background:#222;
+color:white;
+border:none;
+cursor:pointer;
+}
+button:hover{
+background:#444;
+}
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">MyPortfolio</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section id="home" class="section">
+<h1>Hello, I'm Akanksha patil</h1>
+<p>Web Developer | Designer | Programmer</p>
+</section>
+<section id="about" class="section">
+<h2>About Me</h2>
+<p>I am student learning web devlopment using html, css, javascript.</p>
+</section>
+<section id="projects" class="section">
+<h2>My Projects</h2>
+<div class="project-container">
+<div class="card">
+<h3>Project 1</h3>
+<p>Personal portfolio website.</p>
+</div>
+<div class="card">
+<h3>Project 2</h3>
+<p>Exam portal.</p>
+</div>
+<div class="card">
+<h3>Project 3</h3>
+<p>Restaurant managment.</p>
+</div>
+</div>
+</section>
+<section id="contact" class="section">
+<h2>Contact Me</h2>
+<form id="contactForm">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+<footer>
+<p>© 2026 My Portfolio</p>
+</footer>
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Message sent successfully!");
+});
+</script>
+</body>
+</html>
